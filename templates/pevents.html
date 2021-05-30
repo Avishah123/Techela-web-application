@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Events Page </h1> <br>
+
+<h3 class="text-center">Current User Logged In : {{request.user.username}} 
+
+{% if user.is_head == True %}
+(Part of Core)
+{% endif  %}
+
+{% if user.is_authenticated == False %}
+(No User logged In )
+{% endif %}
+
+</h3><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'scrib_form' %}'" >Scribble Registration</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'bolly_form' %}'" > Bollywood Quiz Registration</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'openmic_form' %}'" > OpenMic Registration</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'meme_form' %}'" >Meme War Registration </button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'chess_form' %}'" > Chess Registration </button><br>
+
+
+
+{% endblock %}
+
+

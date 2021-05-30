@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Events Page </h1> <br>
+
+<h3 class="text-center">Current User Logged In : {{request.user.username}} 
+
+{% if user.is_head == True %}
+(Part of Core)
+{% endif  %}
+
+{% if user.is_authenticated == False %}
+(No User logged In )
+{% endif %}
+
+</h3><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'valo_report' %}'" >Valorant Registration Data</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'csgo_report' %}'" >CS-GO Registration Data</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'clash_report' %}'" >Clash Royale Registration Data</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'cod_report' %}'" >Call of duty Registration Data</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'amongus_report' %}'" > Among Us Registration Data</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'tre_report' %}'"> Treasure Hunt Registration Data</button><br>
+
+{% endblock %}
+
+

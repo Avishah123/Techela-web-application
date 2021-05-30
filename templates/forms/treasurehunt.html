@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+  <form action="{% url 'tre_reg' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container">
+
+        <div class="wrapper">
+        <div class="title">
+         Treasure Hunt Registration Form
+        </div>
+        <div class="form">
+           <div class="inputfield">
+              <label>First Name</label>
+              <input  name="first_name" type="text" class="input">
+           </div>  
+
+            <div class="inputfield">
+              <label>Last Name</label>
+              <input name="last_name" type="text" class="input">
+           </div>  
+
+           <div class="inputfield">
+              <label>Mobile Number</label>
+              <input name="mobile_number" type="text" class="input">
+           </div>  
+
+	<div class="inputfield">
+              <label>Email ID</label>
+              <input name="email" type="text" class="input">
+           </div>  
+
+          <div class="inputfield">
+              <label>Discord ID</label>
+              <input name="dicord_id" type="text" class="input">
+           </div> 
+
+           <div class="inputfield">
+            <label>Instagram ID</label>
+            <input name="insta_id" type="text" class="input">
+         </div> 
+
+            <div class="inputfield">
+              <label>Team Name</label>
+              <input name="team_name" type="text" class="input">
+           </div> 
+
+          <div class="inputfield">
+              <label>Name of the College</label>
+              <input name="college_name" type="text" class="input">
+           </div> 
+
+           
+
+          <div class="inputfield">
+              <label>Student ID</label>
+              <input name="student_id" type="file" >
+           </div> 
+
+          <div class="inputfield terms">
+              <label class="check">
+                
+              </label>
+           </div> 
+          <div class="inputfield">
+            <input type="submit"  class="btn">
+          </div>
+        </div>
+    </div>
+    </div>
+    
+  </form>
+
+{% endblock %}

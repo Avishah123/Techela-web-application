@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Home Page </h1> <br>
+
+<h3 class="text-center">Current User Logged In : {{request.user.username}} 
+
+{% if user.is_head == True %}
+(Part of Core)
+{% endif  %}
+
+{% if user.is_authenticated == False %}
+(No User logged In )
+{% endif %}
+ </h3><br>
+
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'student1' %}'" >Register as Core Member</button> <br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'mass_emailer' %}'" >Send Reminder Email to all the Participants</button> <br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'pevents_list' %}'" > List of Pre-techfest Events </button> <br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'preg_list' %}'" >List of Registrations PretechFest </button> <br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'event_list' %}'" > List of Events </button> <br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'reg_list' %}'" > List of Registrations </button> <br>
+
+<button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='{% url 'login' %}'" >Login</button><br>    
+
+<button type="button" class="btn btn-danger btn-lg btn-block" onclick="location.href='{% url 'logout' %}'" >Logout</button>
+
+
+{% endblock %}

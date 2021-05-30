@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Events Page </h1> <br>
+
+<h3 class="text-center">Current User Logged In : {{request.user.username}} 
+
+{% if user.is_head == True %}
+(Part of Core)
+{% endif  %}
+
+{% if user.is_authenticated == False %}
+(No User logged In )
+{% endif %}
+
+</h3><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'valo_form' %}'" >Valorant Registration</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'csgo_form' %}'" >CS-GO Registration</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'clash_form' %}'" >Clash Royale Registration</button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'cod_form' %}'" >Call of duty Registration </button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'amongus_form' %}'" > Among Us Registration </button><br>
+
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='{% url 'tre_form' %}'"> Treasure Hunt Registration </button><br>
+
+{% endblock %}
+
+

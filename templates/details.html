@@ -1,0 +1,45 @@
+
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1 class="text-center">Events</h1>
+
+
+            
+    
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Mobile Number</th>
+                        <th>Email</th>
+                        <th>Name of the event</th>
+                        <th>Name of the College</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event in object_list %}<br>
+
+                        <tr>
+                            <td>{{event.id}}</td>
+                            <td>{{event.first_name}}</td>
+                            <td>{{event.last_name}}</td>
+                            <td>{{event.mobile_number}}</td>
+                            <td> {{event.email}} </td>
+                            <td>{{event.event_name}}</td>
+                            <td>{{event.college_name}}</td>
+                        </tr>
+                    {% endfor%}
+                </tbody>
+            </table>
+        </div>
+    
+{% endblock %}
+
+{% comment %} Syntax for the FOR loop while Listview is {% for event in object_list %} {% endcomment %}
